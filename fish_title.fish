@@ -5,10 +5,14 @@
 
 function fish_title
   if [ "$theme_title_display_process" = 'yes' ]
+    if [ $_ != "fish" ]
     echo $_
-
+#    echo '('
+#    echo $argv[1]
+#    echo ')'
     [ "$theme_title_display_path" != 'no' ]
-      and echo ' '
+      and echo ' :: '
+    end
   end
 
   if [ "$theme_title_display_path" != 'no' ]
